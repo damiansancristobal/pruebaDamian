@@ -48,6 +48,7 @@ steps:
   - run:
       name: Database setup
       command: bin/rails db:schema:load --trace
+
   - run:
     name: Run rspec in parallel
     command: |
