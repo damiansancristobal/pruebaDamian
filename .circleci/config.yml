@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  setup:
     docker:
       - image: circleci/ruby:2.5.5-node
     steps:
@@ -22,7 +22,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.5.5-node
         environment:
-          DATABASE_URL: postgresql://postgres:secret@localhost:5432
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432
           REDIS_URL: redis://redis@localhost:6379
       - image: circleci/postgres:11.5
         environment:
@@ -60,3 +60,18 @@ jobs:
       - store_test_results:
           path: ~/spec-timings
 
+workflows:
+  version: 2
+  setup_and_test:
+    jobs:
+      - setup
+      - test:
+          requires:
+            - setup
+            workflows:
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
