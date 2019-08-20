@@ -3,10 +3,18 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.5
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
+          RAILS_ENV: test
       - image: circleci/postgres:11.5
 
-steps:
-  - checkout
-  - run:
-    name: Which bundler?
-    command: bundle -v
+      steps:
+        - checkout
+        - run:
+          name: Which bundler
+          command: bundle -v
