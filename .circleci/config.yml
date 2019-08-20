@@ -3,6 +3,16 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.5-node
+        environment:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432
+          REDIS_URL: redis://redis@localhost:6379
+      - image: circleci/postgres:11.5
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+          POSTGRES_PASSWORD: postgres
+      - image: circleci/redis:latest
+    parallelism: 2
     steps:
       - checkout
 
