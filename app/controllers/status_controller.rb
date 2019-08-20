@@ -1,5 +1,5 @@
 class StatusController < ApplicationController
     def index
-        render(json: { 'status' => 'ok' , "data" => 45})
+        render(json: { 'status' => 'ok' , "data" => 42})
     end
 end
