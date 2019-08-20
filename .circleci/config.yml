@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  setup:
+  build:
     docker:
       - image: circleci/ruby:2.5.5-node
     steps:
@@ -76,3 +76,4 @@ jobs:
             bundle exec rspec $TESTFILES --profile 10 --format RspecJunitFormatter --out ~/spec-timings/rspec.xml --format progress
       - store_test_results:
           path: ~/spec-timings
+
