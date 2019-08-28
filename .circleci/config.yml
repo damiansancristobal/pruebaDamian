@@ -47,5 +47,9 @@ jobs:
           command: |
             TESTFILES=$(circleci tests glob "spec/**/*_spec.rb")
             bundle exec rspec $TESTFILES --profile 10 --format RspecJunitFormatter --out ~/spec-timings/rspec.xml --format progress
-      - store_test_results:
-          path: ~/spec-timings
+      # Save test results for timing analysis
+      - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+          path: test_results
+      # See https://circleci.com/docs/2.0/deployment-integrations/ for example deploy configs
+
+      
