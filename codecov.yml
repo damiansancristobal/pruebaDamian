@@ -6,12 +6,24 @@ coverage:
   round: down
 
   status:
+    patch: # minimum coverage needed based only on the new code introduced on the PR
+      default: off
+      pr_coverage:
+        target: 60%
     project:
-      tests:  # declare a new status context "tests"
-        target: 100%  # we always want 100% coverage here
-        paths: "spec/"  # only include coverage in "tests/" folder
-      app:  # declare a new status context "app"
-        paths: "!spec/"  # remove all files in "tests/"
+      default:
+        # basic
+        target: auto
+        threshold: null
+        base: auto 
+        # advanced
+        branches: null
+        if_no_uploads: error
+        if_not_found: success
+        if_ci_failed: error
+        only_pulls: false
+        flags: null
+        paths: null
     changes: no
 
 parsers:
