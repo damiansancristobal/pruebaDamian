@@ -16,4 +16,10 @@ class StatusController < ApplicationController
             'hello!' => 'bye!'
         })
     end
+
+    def moreTesting
+        render(json: {
+            'hello2!' => 'bye2!'
+        })
+    end
 end
