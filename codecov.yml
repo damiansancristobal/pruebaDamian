@@ -7,8 +7,8 @@ coverage:
   status:
     patch: 
       target: 90%
-      base: auto
+      base: parent
     project:
       target: 90%
-      base: auto
+      base: parent
     changes: no
