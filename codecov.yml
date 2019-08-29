@@ -5,9 +5,13 @@ codecov:
 coverage:
   round: down
   status:
-    project: 
-      default:
+    patch: # minimum coverage needed based only on the new code introduced on the PR
+    default: off
+    pr_coverage:
+      target: 90%
+    project:
+      default: off
+      minimum: # minimum target of coverage needed to pass the check
         target: 90%
-        base: pr
     patch: off
     changes: no
