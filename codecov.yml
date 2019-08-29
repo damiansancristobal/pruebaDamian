@@ -11,9 +11,10 @@ coverage:
     project: 
       default:
         target: 90%
-    patch: 
-      default:
-        target: 90%
+        base: parent
+      tests:
+        target: 100%  # we always want 100% coverage here
+        paths: "/spec"
     changes: no
 
 parsers:
