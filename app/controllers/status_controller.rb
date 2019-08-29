@@ -7,7 +7,19 @@ class StatusController < ApplicationController
 
     def test
         render(json: {
-            'data-in' => params[:id]
+            'data-inn' => params[:id]
+        })
+    end
+
+    def testing
+        render(json: {
+            'hello!' => 'bye!'
+        })
+    end
+
+    def moreTesting
+        render(json: {
+            'hello2!' => 'bye2!'
         })
     end
 end

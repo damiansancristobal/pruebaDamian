@@ -4,11 +4,32 @@ codecov:
 
 coverage:
   round: down
+
   status:
-    patch: 
-      target: 90%
-      base: auto
+    patch: # minimum coverage needed based only on the new code introduced on the PR
+      default: off
+      pr_coverage:
+        target: 90%
     project:
-      target: 90%
-      base: auto
+      default: off
+      minimum: # minimum target of coverage needed to pass the check
+        target: 90%
     changes: no
+
+ignore:
+  - "spec/**/*"
+
+parsers:
+  gcov:
+    branch_detection:
+      conditional: yes
+      loop: yes
+      method: no
+      macro: no
+
+comment:
+  layout: "header, diff"
+  behavior: default
+  require_changes: no
+  require_base: no        # [yes :: must have a base report to post]
+  require_head: no       # [yes :: must have a head report to post]
