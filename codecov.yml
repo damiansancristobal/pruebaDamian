@@ -8,5 +8,6 @@ coverage:
     project: 
       default:
         target: 90%
+        base: parent
     patch: off
     changes: no
