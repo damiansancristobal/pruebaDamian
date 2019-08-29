@@ -8,13 +8,17 @@ coverage:
   range: "70...100"
 
   status:
-    project: 
-      default:
-        target: 90%
-    patch: 
-      default:
-        target: 90%
+    project: yes
+    patch: yes
     changes: no
+
+parsers:
+  gcov:
+    branch_detection:
+      conditional: yes
+      loop: yes
+      method: no
+      macro: no
 
 comment:
   layout: "header, diff"
