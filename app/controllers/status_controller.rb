@@ -10,4 +10,10 @@ class StatusController < ApplicationController
             'data-in' => params[:id]
         })
     end
+
+    def testing
+        render(json: {
+            'hello!' => 'bye!'
+        })
+    end
 end
