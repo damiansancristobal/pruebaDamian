@@ -7,6 +7,8 @@ coverage:
   status:
     patch: 
       target: 90%
+      base: auto
     project:
       target: 90%
+      base: auto
     changes: no
