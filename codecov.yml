@@ -16,6 +16,9 @@ coverage:
         target: 90%
     changes: no
 
+ignore:
+  - "spec/**/*"
+  
 parsers:
   gcov:
     branch_detection:
