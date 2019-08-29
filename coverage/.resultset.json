@@ -19,16 +19,35 @@
         1,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/lbarenchi/Documents/Facultad/PIS/pruebaDamian/app/controllers/status_controller.rb": [
+        1,
+        1,
+        1,
         null,
         null,
         null,
         null,
+        1,
+        0,
         null,
         null,
         null,
         null
+      ],
+      "/Users/lbarenchi/Documents/Facultad/PIS/pruebaDamian/app/controllers/application_controller.rb": [
+        1,
+        null
       ]
     },
-    "timestamp": 1567039208
+    "timestamp": 1567085729
   }
 }
