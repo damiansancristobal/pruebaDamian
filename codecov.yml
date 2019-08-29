@@ -6,14 +6,8 @@ coverage:
   round: down
 
   status:
-    project: 
-      default:
-        target: 90%
-            
-    patch: 
-      default:
-        target: 90%
-        base: pr
+    project: yes
+    patch: yes
     changes: no
 
 parsers:
