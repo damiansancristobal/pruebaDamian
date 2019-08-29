@@ -7,8 +7,7 @@ coverage:
 
   status:
     patch: # minimum coverage needed based only on the new code introduced on the PR
-      default: off
-      pr_coverage:
+      default: 
         target: 90%
     project:
       default: off
